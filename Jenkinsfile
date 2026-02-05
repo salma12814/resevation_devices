@@ -17,7 +17,7 @@ pipeline {
     MAVEN_OPTS   = '-Xmx1024m'
 
     // ----- Azure Container Registry -----
-    ACR   = 'acrreservation2.azurecr.io'        // loginServer de l'ACR
+    //ACR   = 'acrreservation2.azurecr.io'        // loginServer de l'ACR
     IMAGE = 'reservation-backend'
     TAG   = "${env.BUILD_NUMBER}"
   }
