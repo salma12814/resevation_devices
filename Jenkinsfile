@@ -26,7 +26,7 @@ pipeline {
 
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/salmaissam12814/resevation_devices.git'
+        git branch: 'main', url: 'https://github.com/salmaissam12814/resevation_devices'
       }
     }
 
