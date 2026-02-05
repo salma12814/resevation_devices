@@ -53,6 +53,22 @@ pipeline {
    //     }
    //   }
    // }
+    stage('SonarCloud Analysis (backend)') {
+  steps {
+    dir('backend') {
+      withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
+        bat """
+          mvn -B -e sonar:sonar ^
+            -Dsonar.projectKey=%PROJECT_KEY% ^
+            -Dsonar.organization=%ORG% ^
+            -Dsonar.host.url=https://sonarcloud.io ^
+            -Dsonar.login=%SONAR_TOKEN%
+        """
+      }
+    }
+  }
+}
+
 
    // stage('Build & Push to ACR') {
    //   steps {
