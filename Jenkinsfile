@@ -9,7 +9,7 @@ pipeline {
   environment {
     ORG          = 'zinebmouman'
     PROJECT_KEY  = 'resevation_devices'
-    //SONAR_TOKEN  = credentials('SONAR_TOKEN3')
+    SONAR_TOKEN  = credentials('SONAR_TOKEN')
 
     MAVEN_OPTS   = '-Xmx1024m'
 
