@@ -12,7 +12,7 @@ pipeline {
     // ----- SonarCloud -----
     ORG          = 'zinebmouman'                // organization SonarCloud
     PROJECT_KEY  = 'resevation_devices'         // projectKey SonarCloud
-    SONAR_TOKEN  = credentials('SONAR_TOKEN3')  // Secret Text
+    //SONAR_TOKEN  = credentials('SONAR_TOKEN3')  // Secret Text
 
     MAVEN_OPTS   = '-Xmx1024m'
 
